@@ -1,0 +1,25 @@
+#num {
+  margin: 20px;
+  height: 80px;
+  font-size: 64px;
+  width: 150px;
+  text-align: center;
+}
+
+.num-enter {
+  opacity: 0.01;
+}
+
+.num-enter.num-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.num-leave {
+  opacity: 1;
+}
+
+.num-leave.num-leave-active {
+  opacity: 0.01;
+  transition: opacity 100ms ease-in-out;
+}

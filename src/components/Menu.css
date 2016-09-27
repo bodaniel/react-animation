@@ -1,0 +1,36 @@
+#menu #menu-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+#menu.visible #menu-bg{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#menu #menu-content {
+  width: 300px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: -350px;
+  height: 100%;
+  transition: left 0.2s ease-in-out;
+}
+
+#menu.visible #menu-content {
+  left: 0;
+}
+
+#menu ul {
+  list-style: none;
+}

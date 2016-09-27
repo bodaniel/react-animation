@@ -1,0 +1,26 @@
+#popup {
+  width: 300px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+}
+
+.popup-enter {
+  opacity: 0.01;
+}
+
+.popup-enter.popup-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.popup-leave {
+  opacity: 1;
+}
+
+.popup-leave.popup-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in-out;
+}
