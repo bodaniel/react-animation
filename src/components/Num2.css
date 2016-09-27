@@ -1,0 +1,28 @@
+#num2 {
+  margin: 20px;
+  height: 80px;
+  font-size: 64px;
+  width: 150px;
+  text-align: center;
+}
+
+.num2-enter {
+  opacity: 0;
+}
+.num2-enter.num2-enter-active {
+  opacity: 1;
+  /* Delay the enter animation until the leave completes */
+  transition: opacity 300ms ease-in-out 200ms;
+}
+
+.num2-leave {
+  opacity: 1;
+}
+.num2-leave.num2-leave-active {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.fade-wait-height {
+  transition: height 500ms ease-in-out;
+}

@@ -8,6 +8,7 @@
   "dependencies": {
     "react": "^15.3.2",
     "react-addons-css-transition-group": "^15.3.2",
+    "react-css-transition-replace": "^2.0.1",
     "react-dom": "^15.3.2"
   },
   "scripts": {

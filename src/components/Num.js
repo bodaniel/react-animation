@@ -5,7 +5,7 @@ import './Num.css'
 const Num = ({ value, updating }) => {
 	return (
 		<p id="num">
-			<ReactCSSTransitionGroup transitionName="num" transitionEnterTimeout={300} transitionLeaveTimeout={100}>
+			<ReactCSSTransitionGroup transitionName="num" transitionEnterTimeout={300} transitionLeaveTimeout={200}>
 			{!updating && (
 				<span>{value}</span>
 			)}
