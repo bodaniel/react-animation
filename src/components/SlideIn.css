@@ -1,0 +1,16 @@
+#SlideIn {
+  position: absolute;
+  bottom: -230px;
+  height: 200px;
+  right: 20px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: bottom 0.2s ease-in;
+  text-align: center;
+  padding: 20px;
+}
+
+#SlideIn.visible {
+  bottom: 300px;
+  transition: bottom 0.3s ease-in-out;
+}

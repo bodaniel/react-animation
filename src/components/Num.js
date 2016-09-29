@@ -1,17 +1,8 @@
 import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './Num.css'
 
-const Num = ({ value, updating }) => {
-	return (
-		<p id="num">
-			<ReactCSSTransitionGroup transitionName="num" transitionEnterTimeout={300} transitionLeaveTimeout={200}>
-			{!updating && (
-				<span>{value}</span>
-			)}
-			</ReactCSSTransitionGroup>
-		</p>
-	)
-}
+const Num = ({ value }) => (
+	<p className="num">{value}</p>
+)
 
 export default Num

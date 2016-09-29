@@ -10,3 +10,7 @@ button {
   padding: 10px;
   margin-right: 10px;
 }
+
+.num-fader {
+  height: 80px;
+}
