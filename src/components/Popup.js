@@ -8,7 +8,7 @@ const Popup = ({ visible, onClose }) => {
 		{visible && (
 			<div id="popup">
 				<p>This is a popup popping up</p>
-				<button onClick={onClose}>Hide</button>
+				<button onClick={onClose}>Close</button>
 			</div>
 		)}
 		</ReactCSSTransitionGroup>
