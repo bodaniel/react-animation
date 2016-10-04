@@ -59,11 +59,11 @@ class App extends Component {
         <button id="addButton" onClick={() => this.add()}>Add one</button>
         <button id="addButton2" onClick={() => this.add2()}>Add one 2</button>
         <button id="popupButton" onClick={() => this.showPopup()}>Show/hide popup</button>
-        <SlideIn visible={this.state.slideInVisible} count={this.state.count} onClose={this.hideSlideIn} />
         <FadeOutFadeIn transitionName="num" className="num-fader">
           <Num value={this.state.count} key={this.state.count}/>
         </FadeOutFadeIn>
         <Num2 value={this.state.count2} />
+        <SlideIn visible={this.state.slideInVisible} count={this.state.count} onClose={this.hideSlideIn} />
         <Popup visible={this.state.popupVisible} onClose={this.hidePopup} />
         <Menu visible={this.state.menuVisible} onClose={this.hideMenu} />
       </div>
