@@ -3,12 +3,13 @@ body {
 }
 
 .App {
-  margin: 20px;
 }
 
 button {
   padding: 10px;
-  margin-right: 10px;
+  margin: 20px;
+  margin-right: 0px;
+  margin-bottom: 0;
 }
 
 .num-fader {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import SearchHeader from './components/SearchHeader';
 import Menu from './components/Menu';
 import FadeOutFadeIn from './components/FadeOutFadeIn';
 import Num from './components/Num';
@@ -52,6 +53,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <SearchHeader />
         <button id="menuButton" onClick={() => this.showMenu()}>Show menu</button>
         <button id="slideInButton" onClick={() => this.toggleSlideIn()}>Show/hide slide in</button>
         <button id="addButton" onClick={() => this.add()}>Add one</button>
