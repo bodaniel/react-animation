@@ -7,7 +7,7 @@
   padding: 10px;
   border: none;
   width: 400px;
-  max-width: 80%;
+  max-width: calc(100% - 20px);
   display: block;
   background: #eee;
   transition: background 0.2s ease-in;
