@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import React, { Component } from 'react'
+
+import './FadeOutFadeIn.css'
 
 class FadeOutFadeIn extends Component {
 
 	state = {
 		children: this.props.children,
-		updating: false
+		status: 'showing'
 	}
 
 	componentWillReceiveProps(props) {
@@ -15,36 +16,23 @@ class FadeOutFadeIn extends Component {
 		if (props.children === this.props.children) {
 			return
 		}
-		this.setState({updating: true})
-		setTimeout(_ => {
-			this.setState({updating: false, children: props.children})
-		}, 200)
+		this.setState({ status: 'hiding'})
+		setTimeout(() => {
+			this.setState({
+				status: 'showing', 
+				children: props.children
+			})
+		}, 500)
 	}
 
 	render() {
 		return (
-			<ReactCSSTransitionGroup className={this.props.className} transitionName={this.props.transitionName} transitionEnterTimeout={300} transitionLeaveTimeout={200}>
-			{!this.state.updating && (
-				<div>{this.state.children}</div>
-			)}
-			</ReactCSSTransitionGroup>
+			<div className={'FadeOutFadeIn ' + this.state.status}>
+				{this.state.children}
+			</div>
 		)
 	}
 
 }
-
-/*
-const Num = ({ value, updating }) => {
-	return (
-		<p id="num">
-			<ReactCSSTransitionGroup transitionName="num" transitionEnterTimeout={300} transitionLeaveTimeout={200}>
-			{!updating && (
-				<span>{value}</span>
-			)}
-			</ReactCSSTransitionGroup>
-		</p>
-	)
-}
-*/
 
 export default FadeOutFadeIn
