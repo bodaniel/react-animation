@@ -1,11 +1,8 @@
 .FadeOutFadeIn {
-	transition: opacity 0.5s;
-}
-
-.FadeOutFadeIn.showing {
-	opacity: 1
+	transition: opacity 0.3s;
 }
 
 .FadeOutFadeIn.hiding {
-	opacity: 0.001
+	opacity: 0.01;
+	transition: opacity 0.2s;
 }

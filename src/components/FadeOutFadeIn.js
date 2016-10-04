@@ -6,7 +6,7 @@ class FadeOutFadeIn extends Component {
 
 	state = {
 		children: this.props.children,
-		status: 'showing'
+		hiding: false
 	}
 
 	componentWillReceiveProps(props) {
@@ -16,18 +16,18 @@ class FadeOutFadeIn extends Component {
 		if (props.children === this.props.children) {
 			return
 		}
-		this.setState({ status: 'hiding'})
+		this.setState({ hiding: true })
 		setTimeout(() => {
 			this.setState({
-				status: 'showing', 
+				hiding: false,
 				children: props.children
 			})
-		}, 500)
+		}, 200)
 	}
 
 	render() {
 		return (
-			<div className={'FadeOutFadeIn ' + this.state.status}>
+			<div className={'FadeOutFadeIn ' + (this.state.hiding ? "hiding" : "")}>
 				{this.state.children}
 			</div>
 		)
